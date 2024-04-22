@@ -155,7 +155,7 @@ class CompletionLevel {
 }
 
 function nameCompletion(label: string, type: string, idQuote: string): Completion {
-  if (/^[a-z_][a-z_\d]*$/.test(label)) return {label, type}
+  if (/^[a-z_][a-z_\d]*$/i.test(label)) return {label, type}
   return {label, type, apply: idQuote + label + idQuote}
 }
 
